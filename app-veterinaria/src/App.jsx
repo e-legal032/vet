@@ -1,22 +1,21 @@
-import { useEffect } from 'react'
-import { supabase } from './supabase/client'
+import { Routes, Route } from 'react-router-dom'
+import Layout from './components/Layout'
+import Home from './views/Home'
+import Reserva from './views/Reserva'
+import TurnoConfirmacion from './components/TurnoConfirmacion'
 
-function App() {
-  useEffect(() => {
-    const validarConexion = async () => {
-      const { data, error } = await supabase.from('clientes').select('*').limit(1)
+const App = () => {
+  return (
+    <Routes>
+      <Route path='/' element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path='reserva' element={<Reserva />} />
+        <Route path="confirmacion" element={<TurnoConfirmacion />} />
 
-      if (error) {
-        console.error('❌ Falló conexión:', error.message)
-      } else {
-        console.log('✅ Conexión ok — muestra de datos:', data)
-      }
-    }
-
-    validarConexion()
-  }, [])
-
-  return <h1>🌐 Validando conexión con Supabase...</h1>
+        {/* Más rutas */}
+      </Route>
+    </Routes>
+  )
 }
 
 export default App
