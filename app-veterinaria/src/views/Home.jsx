@@ -1,23 +1,21 @@
 import { Link } from 'react-router-dom'
-import Layout from '../components/Layout'
 
 const Home = () => {
   return (
     <section className="home">
-      <h1>Agenda tu turno veterinario</h1>
-      <p>Esta plataforma te permite registrar tus datos y elegir una fecha para tu consulta.</p>
-      
-      <ul>
-        <li>🐾 Registro del cliente</li>
-        <li>📅 Selección de fecha</li>
-        <li>✅ Confirmación narrativa del turno</li>
-      </ul>
+      <h1>Bienvenida a la app de turnos veterinarios 🐶🐱</h1>
+      <p>
+        Esta plataforma te permite reservar turnos para tus mascotas de forma rápida y segura.
+      </p>
+
+      <p>
+        Si ya sos cliente, podés iniciar el proceso de reserva con un solo clic.
+      </p>
 
       <Link to="/reserva" className="cta">
-        Iniciar reserva
+        🐾 Quiero reservar un turno
       </Link>
     </section>
-   
   )
 }
 

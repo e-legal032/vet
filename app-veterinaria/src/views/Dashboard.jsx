@@ -21,10 +21,10 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <Layout>
+    <>
       <h1>Panel de turnos</h1>
       <TurnoListado turnos={turnos} />
-    </Layout>
+    </>
   );
 };
 

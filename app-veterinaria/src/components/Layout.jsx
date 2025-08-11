@@ -1,11 +1,12 @@
 import { Outlet } from 'react-router-dom'
+import Navbar from './Navbar'
 
 const Layout = () => {
   return (
     <>
       <header>
         <h1>Veterinaria Z</h1>
-        {/* Podés sumar tu barra de navegación modular acá */}
+        <Navbar />
       </header>
 
       <main>

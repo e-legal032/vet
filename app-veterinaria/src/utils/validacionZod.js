@@ -1,6 +1,7 @@
 // utils/validacionZod.js
 import { z } from 'zod'
 
+//Esquema para turnos
 export const esquemaTurno = z.object({
   nombre: z.string().min(1, "El nombre es obligatorio"),
   email: z.string().email("Formato de email no válido"),
@@ -12,3 +13,9 @@ export const esquemaTurno = z.object({
   )
 })
 
+//Esquema para consultas
+export const esquemaConsulta = z.object({
+  nombre: z.string().min(1, "El nombre es obligatorio"),
+  contacto: z.string().min(1, "El contacto es obligatorio"),
+  mensaje: z.string().min(1, "El mensaje no puede estar vacío"),
+})
